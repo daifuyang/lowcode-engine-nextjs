@@ -1,0 +1,42 @@
+{
+  "name": "lowcode-engine-nextjs",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/css-modules-typescript-loader",
+      "**/@alifc/theme-lowcode-*",
+      "**/jest"
+    ]
+  },
+  "scripts": {
+    "lint": "f2elint scan -q -i ./packages/*/src",
+    "lint:fix": "f2elint fix -i ./packages/*/src",
+    "lint:modules": "f2elint scan -q -i ./modules/*/src",
+    "lint:modules:fix": "f2elint fix -i ./modules/*/src",
+    "setup": "node ./scripts/setup.js",
+    "build:npm": "lerna run build --stream",
+    "build:packages": "./scripts/build.sh"
+  },
+  "devDependencies": {
+    "del": "^6.1.1",
+    "execa": "^5.1.1",
+    "f2elint": "^2.0.1",
+    "gulp": "^4.0.2",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "typescript": "4.6.2",
+    "yarn": "^1.22.17",
+    "rimraf": "^3.0.2",
+    "@types/react-router": "5.1.18",
+    "build-plugin-component": "^1.12.0",
+    "babel-jest": "^26.5.2",
+    "@alilc/lowcode-test-mate": "^1.0.1"
+  },
+  "resolutions": {
+    "typescript": "4.6.2"
+  }
+}
