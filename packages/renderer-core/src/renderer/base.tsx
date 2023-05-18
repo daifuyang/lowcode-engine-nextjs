@@ -250,7 +250,6 @@ export default function baseRendererFactory(): IBaseRenderComponent {
         this.__dataHelper
           .getInitData()
           .then((res: any) => {
-            console.log('res',res)
             if (isEmpty(res)) {
               this.forceUpdate();
               return resolve({});

@@ -244,5 +244,5 @@ export default function rendererFactory(): IRenderComponent {
       }
       return null;
     }
-  };
+  } as any;
 }

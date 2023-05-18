@@ -14,7 +14,7 @@ export default function pageRendererFactory(): IBaseRenderComponent {
       });
       const schema = props.__schema || {};
       const state = this.__parseData(schema.state || {});
-      this.state = { ...state, ...props.state };
+      this.state = state;
       this.__initDataSource(props);
       this.__executeLifeCycleMethod('constructor', [props, ...rest]);
     }
