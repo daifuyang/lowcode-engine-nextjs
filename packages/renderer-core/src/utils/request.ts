@@ -1,4 +1,4 @@
-import 'whatwg-fetch';
+// import 'whatwg-fetch';
 import fetchJsonp from 'fetch-jsonp';
 import { serializeParams } from '.';
 

@@ -26,7 +26,7 @@ adapter.setRuntime({
   createContext,
   createElement,
   forwardRef,
-  findDOMNode: ReactDOM.findDOMNode,
+  findDOMNode: () => {},
 });
 
 adapter.setRenderers({
