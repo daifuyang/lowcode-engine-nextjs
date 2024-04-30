@@ -16,7 +16,8 @@ export function compWrapper(Comp: any) {
 
   return cloneEnumerableProperty(
     forwardRef((props: any, ref: any) => {
-      return createElement(Wrapper, { ...props, forwardRef: ref });
+      // return createElement(Wrapper, { ...props, forwardRef: ref });
+      return createElement(Wrapper, { ...props, ref });
     }),
     Comp,
   );
